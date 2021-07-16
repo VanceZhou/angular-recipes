@@ -1,0 +1,74 @@
+<div class="register-section">
+    <div class="row justify-content-center">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" style="text-align: center">
+                    <h4>Post Recipe</h4>
+                </div>
+                <div class="card-body">
+                    <form [formGroup]="recipeForm" (ngSubmit)="postRecipe()">
+                        <div class="form-group row">
+                            <label for="name" class="col-md-4 col-form-label text-md-right">Recipe Name</label>
+                            <div class="col-md-6">
+                                <input type="text" [formControlName]="'name'" id="name" class="form-control" name="name" required
+                                    autofocus>
+                                    <span *ngIf="!recipeForm?.get('name')?.valid && recipeForm?.get('name')?.touched">
+                                        please provide valid name!
+                                    </span>
+                                                                
+                            </div>
+                        </div>
+ 
+                        <div class="form-group row">
+                            <label class="col-md-4 col-form-label text-md-right">Description</label>
+                            <div class="col-md-6">
+                                <input type="text" [formControlName]="'description'"class="form-control" required autofocus>
+                                <span *ngIf="!recipeForm?.get('description')?.valid && recipeForm?.get('description')?.touched">
+                                    please provide valid description!
+                                </span>
+                            </div>
+                        </div>
+ 
+                        
+                        <div class="form-group row">
+                            <label for="category" class="col-md-4 col-form-label text-md-right">Category</label>
+                            <div class="col-md-6">
+                                <input type="category"  [formControlName]="'category'" id="category" class="form-control" name="category" required>
+                                <span *ngIf="!recipeForm?.get('category')?.valid && recipeForm?.get('category')?.touched">
+                                    please provide valid category!
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="ingredients" class="col-md-4 col-form-label text-md-right">Ingredients</label>
+                            <div class="col-md-6">
+                                <input type="ingredients"  [formControlName]="'ingredients'" id="ingredients" class="form-control" name="ingredients" required>
+                                <span *ngIf="!recipeForm?.get('ingredients')?.valid && recipeForm?.get('ingredients')?.touched">
+                                    please provide valid ingredients!
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="directions" class="col-md-4 col-form-label text-md-right">Directions</label>
+                            <div class="col-md-6">
+                                <input type="directions"  [formControlName]="'directions'" id="directions" class="form-control" name="directions" required>
+                                <span *ngIf="!recipeForm?.get('directions')?.valid && recipeForm?.get('directions')?.touched">
+                                    please provide valid directions!
+                                </span>
+                            </div>
+                        </div>
+ 
+                        <span class="col-md-6 offset-md-4">
+                            <button type="submit" class="sign-up">
+                                Post
+                            </button>
+                            
+                        </span>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>

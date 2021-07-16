@@ -1,0 +1,20 @@
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="flex-grow-1">
+            <a aria-label="Home" class="logo" routerLink="/">
+               
+                <img class="account-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Recipe_logo.jpeg/128px-Recipe_logo.jpeg">
+                <span class="recipe-text">
+                    Recipes
+                </span>
+            </a>
+        </div>
+        <div class="header-buttons">
+                <a routerLink="/profile" class="float-right sign-up mr-2">Profile</a>
+                <a routerLink="" (click)="logout()" class="float-right login mr-2">Logout</a>
+                <a routerLink="/sign-up" class="float-right sign-up mr-2">Sign up</a>
+                <a routerLink="/login" class="float-right login mr-2">Login</a>
+            
+        </div>
+    </nav>
+</header>
